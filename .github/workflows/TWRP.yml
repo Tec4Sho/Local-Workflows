@@ -92,7 +92,7 @@ jobs:
       - name: Sync Source
         run: |
           cd twrp
-          repo sync
+          repo sync -j$(nproc --all) --force-sync
 
       - name: Clone Device Tree
         run: |
